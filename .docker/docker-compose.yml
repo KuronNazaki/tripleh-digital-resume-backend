@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  mongo_db:
+    container_name: tripleh-db
+    image: 'mongo:latest'
+    restart: always
+    ports:
+      - '2717:27017'
+    volumes:
+      - 'mongo_db:/data/db'
+volumes:
+  mongo_db: {}
